@@ -1,0 +1,36 @@
+cdm_wechat_sougou 微信搜狗排行
+
+Field	Type	Comment
+id	int(11) NOT NULL
+hot_word	varchar(255) NULL	热词
+hot_word_link	varchar(1000) NULL	热词连接url
+Rank	varchar(11) NULL	排名
+Uuid	varchar(100) NULL	唯一id
+create_date	datetime NULL	记录创建时间
+
+cdm_wechat_sougou_hot_articles 微信搜狗热文
+
+Field	Type	Comment
+id	int(11) NOT NULL	id
+toolbar	varchar(32) NULL	文章来源的状态栏
+link	varchar(500) NULL	文章连接
+html_text	mediumtext NULL	对应的文章内容
+introduction	varchar(500) NULL	文章简介
+title	varchar(500) NULL	文章标题
+wechat_source	varchar(500) NULL	来自哪个公众号的链接
+date_ago	varchar(32) NULL	多少时间之前（）
+wechat_image_local_url	varchar(500) NULL	公众号图片本地路径
+wechat_image_link_url	varchar(500) NULL	公众号图片链接地址
+wechat_name	varchar(100) NULL	公众号名字
+create_time	datetime NULL	记录生成时间
+
+cdm_wechat_sougou_top10 搜狗前十文章
+
+Field	Type	Comment
+id	int(11) NOT NULL
+title	varchar(255) NULL	标题
+introduction	varchar(500) NULL	标题简介
+link	varchar(500) NULL	文章连接地址
+hot_word_uuid	varchar(100) NULL	关联的热词号码
+html_text	mediumtext NULL	html里面的内容
+date_ago	varchar(32) NULL	多少时间之前
